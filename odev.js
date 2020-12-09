@@ -44,6 +44,28 @@ numbers.multiply();
 */
 function isValidName(name){
 
+    if(typeof name=="string" ){
+        let lastCondition;
+        var a= name.trim();
+        var b= a.split(" ");
+
+        for (let i = 0; i < b.length; i++) {
+            const element = b[i];
+            if(element.length>=2){
+                lastCondition = true
+                
+            } else if (element.length<2){
+                lastCondition = false
+                break;
+            }
+        }
+        
+      
+        return lastCondition
+    } else {
+        return false
+      }    
+
 }
 
 /*
