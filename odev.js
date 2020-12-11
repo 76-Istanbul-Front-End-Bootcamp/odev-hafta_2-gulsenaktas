@@ -82,6 +82,23 @@ function isValidName(name){
 */
 function katilimSaati(dersSayisi, dersSuresi){
 
-}
+    let sonuc;
+    const illegaller=[null, Infinity, "", true, false];
+
+    if(illegaller.includes(dersSayisi) || illegaller.includes(dersSuresi)){
+        sonuc = false
+    } else {
+        const number1= Number(dersSayisi);
+        const number2= Number(dersSuresi);
+
+        if(isNaN(number1) || isNaN(number2)) {
+        sonuc= false
+        } else {
+        sonuc = dersSayisi*dersSuresi
+        }
+    }
+     
+    return sonuc
+};
 
 
